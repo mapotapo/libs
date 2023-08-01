@@ -1,4 +1,4 @@
-import { ActivityLevel, Currency, ExperienceLevel, MediaType, ProductType } from '@prisma/client';
+import { ActivityLevel, Currency, ExperienceLevel, MediaType, ProductType } from '../enums/productEnums';
 
 export type ProductCovers = {
   label: string;
