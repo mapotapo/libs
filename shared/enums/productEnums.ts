@@ -1,4 +1,4 @@
-const ProductType: {
+export const ProductType: {
   [k: string]:
     | 'ACTIVITY'
     | 'DAYTOUR'
@@ -31,7 +31,7 @@ const ProductType: {
 
 export type ProductType = (typeof ProductType)[keyof typeof ProductType];
 
-const Currency: { [k: string]: 'EUR' | 'GBP' | 'USD' } = {
+export const Currency: { [k: string]: 'EUR' | 'GBP' | 'USD' } = {
   EUR: 'EUR',
   GBP: 'GBP',
   USD: 'USD',
@@ -39,14 +39,7 @@ const Currency: { [k: string]: 'EUR' | 'GBP' | 'USD' } = {
 
 export type Currency = (typeof Currency)[keyof typeof Currency];
 
-const MediaType: { [k: string]: 'IMAGE' | 'VIDEO' } = {
-  IMAGE: 'IMAGE',
-  VIDEO: 'VIDEO',
-};
-
-export type MediaType = (typeof MediaType)[keyof typeof MediaType];
-
-const ExperienceLevel: { [k: string]: 'BEGINNER' | 'MEDIUM' | 'ADVANCED' } = {
+export const ExperienceLevel: { [k: string]: 'BEGINNER' | 'MEDIUM' | 'ADVANCED' } = {
   BEGINNER: 'BEGINNER',
   MEDIUM: 'MEDIUM',
   ADVANCED: 'ADVANCED',
@@ -54,7 +47,7 @@ const ExperienceLevel: { [k: string]: 'BEGINNER' | 'MEDIUM' | 'ADVANCED' } = {
 
 export type ExperienceLevel = (typeof ExperienceLevel)[keyof typeof ExperienceLevel];
 
-const ActivityLevel: { [k: string]: 'LOW_FIT' | 'MEDIUM_FIT' | 'HIGH_FIT' } = {
+export const ActivityLevel: { [k: string]: 'LOW_FIT' | 'MEDIUM_FIT' | 'HIGH_FIT' } = {
   LOW_FIT: 'LOW_FIT',
   MEDIUM_FIT: 'MEDIUM_FIT',
   HIGH_FIT: 'HIGH_FIT',
@@ -62,7 +55,7 @@ const ActivityLevel: { [k: string]: 'LOW_FIT' | 'MEDIUM_FIT' | 'HIGH_FIT' } = {
 
 export type ActivityLevel = (typeof ActivityLevel)[keyof typeof ActivityLevel];
 
-const Sports: { [k: string]: 'CLIMBING' | 'JUMPING' } = {
+export const Sports: { [k: string]: 'CLIMBING' | 'JUMPING' } = {
   CLIMBING: 'CLIMBING',
   JUMPING: 'JUMPING',
 };
