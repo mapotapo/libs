@@ -1,216 +1,70 @@
-export enum ProductType {
-  ACTIVITY = 'Activity',
-  DAYTOUR = 'Day tour',
-  MULTIDAYTOUR = 'Multiday tour',
-  PRIVATE_TOUR = 'Private tour',
-  TICKET = 'Ticket',
-  RENTAL = 'Rental',
-  CHARTER = 'Charter',
-  EVENT = 'Event',
-  GIFT_CARD = 'Gift card',
-  TRANSFER = 'Transfer',
-  LESSON = 'Lesson',
-  MERCHANDISE = 'Merchandise',
-  CUSTOM = 'Custom',
-}
+const ProductType: {
+  [k: string]:
+    | 'ACTIVITY'
+    | 'DAYTOUR'
+    | 'MULTIDAYTOUR'
+    | 'PRIVATE_TOUR'
+    | 'TICKET'
+    | 'RENTAL'
+    | 'CHARTER'
+    | 'EVENT'
+    | 'GIFT_CARD'
+    | 'TRANSFER'
+    | 'LESSON'
+    | 'MERCHANDISE'
+    | 'CUSTOM';
+} = {
+  ACTIVITY: 'ACTIVITY',
+  DAYTOUR: 'DAYTOUR',
+  MULTIDAYTOUR: 'MULTIDAYTOUR',
+  PRIVATE_TOUR: 'PRIVATE_TOUR',
+  TICKET: 'TICKET',
+  RENTAL: 'RENTAL',
+  CHARTER: 'CHARTER',
+  EVENT: 'EVENT',
+  GIFT_CARD: 'GIFT_CARD',
+  TRANSFER: 'TRANSFER',
+  LESSON: 'LESSON',
+  MERCHANDISE: 'MERCHANDISE',
+  CUSTOM: 'CUSTOM',
+};
 
-export enum Currency {
-  AED,
-  ANG,
-  ARS,
-  AUD,
-  AWG,
-  AZN,
-  BGN,
-  BHD,
-  BOB,
-  BRL,
-  BYR,
-  CAD,
-  CHF,
-  CLP,
-  CNY,
-  COP,
-  CZK,
-  DKK,
-  EGP,
-  EUR,
-  FJD,
-  GBP,
-  GEL,
-  HKD,
-  HRK,
-  HUF,
-  IDR,
-  ILS,
-  INR,
-  ISK,
-  JOD,
-  JPY,
-  KES,
-  KRW,
-  KWD,
-  KZT,
-  LTL,
-  LVL,
-  MAD,
-  MKD,
-  MUR,
-  MXN,
-  MYR,
-  NGN,
-  NOK,
-  NZD,
-  PGK,
-  PHP,
-  OMR,
-  PEN,
-  PLN,
-  PYG,
-  QAR,
-  RON,
-  RSD,
-  RUB,
-  SAR,
-  SBD,
-  SEK,
-  SGD,
-  SRD,
-  SYP,
-  THB,
-  TOP,
-  TRY,
-  TWD,
-  UAH,
-  USD,
-  UYU,
-  VEF,
-  VUV,
-  WST,
-  XAF,
-  XOF,
-  XPF,
-  YER,
-  ZAR,
-  AFA,
-  ALL,
-  DZD,
-  AMD,
-  BSD,
-  BDT,
-  BBD,
-  BZD,
-  BMD,
-  BWP,
-  BND,
-  BIF,
-  KHR,
-  CVE,
-  KYD,
-  KMF,
-  BAM,
-  CRC,
-  CUP,
-  CYP,
-  DJF,
-  DOP,
-  XCD,
-  ECS,
-  SVC,
-  ERN,
-  EEK,
-  ETB,
-  FKP,
-  CDF,
-  GMD,
-  GHS,
-  GIP,
-  GTQ,
-  GNF,
-  GWP,
-  GYD,
-  HTG,
-  HNL,
-  IRR,
-  IQD,
-  JMD,
-  AOA,
-  KGS,
-  KIP,
-  LAK,
-  LBP,
-  LRD,
-  LYD,
-  LSL,
-  MOP,
-  MGF,
-  MGA,
-  MWK,
-  MVR,
-  MTL,
-  MRO,
-  MDL,
-  MNT,
-  MZM,
-  MMK,
-  NAD,
-  NPR,
-  NIO,
-  KPW,
-  PKR,
-  PAB,
-  RWF,
-  STD,
-  SCR,
-  SLL,
-  SKK,
-  SIT,
-  SOS,
-  LKR,
-  SHP,
-  SDD,
-  SZL,
-  TJS,
-  TZS,
-  TTD,
-  TND,
-  TMM,
-  UGX,
-  UZS,
-  VND,
-  YUM,
-  ZMK,
-  ZWD,
-  AFN,
-  MZN,
-  UYI,
-  ZMW,
-  GHC,
-  GGP,
-  IMP,
-  JEP,
-  TRL,
-  TVD,
-}
+export type ProductType = (typeof ProductType)[keyof typeof ProductType];
 
-export enum MediaType {
-  IMAGE,
-  VIDEO,
-}
+const Currency: { [k: string]: 'EUR' | 'GBP' | 'USD' } = {
+  EUR: 'EUR',
+  GBP: 'GBP',
+  USD: 'USD',
+};
 
-export enum ExperienceLevel {
-  BEGINNER = 'Beginner',
-  MEDIUM = 'Medium',
-  ADVANCED = 'Advanced',
-}
+export type Currency = (typeof Currency)[keyof typeof Currency];
 
-export enum ActivityLevel {
-  LOW_FIT = 'Low fit',
-  MEDIUM_FIT = 'Fit',
-  HIGHT_FIT = 'High fit',
-}
+const MediaType: { [k: string]: 'IMAGE' | 'VIDEO' } = {
+  IMAGE: 'IMAGE',
+  VIDEO: 'VIDEO',
+};
 
-export enum Sports {
-  CLIMBING = 'Climbing',
-  JUMPING = 'Jumping',
-}
+export type MediaType = (typeof MediaType)[keyof typeof MediaType];
+
+const ExperienceLevel: { [k: string]: 'BEGINNER' | 'MEDIUM' | 'ADVANCED' } = {
+  BEGINNER: 'BEGINNER',
+  MEDIUM: 'MEDIUM',
+  ADVANCED: 'ADVANCED',
+};
+
+export type ExperienceLevel = (typeof ExperienceLevel)[keyof typeof ExperienceLevel];
+
+const ActivityLevel: { [k: string]: 'LOW_FIT' | 'MEDIUM_FIT' | 'HIGH_FIT' } = {
+  LOW_FIT: 'LOW_FIT',
+  MEDIUM_FIT: 'MEDIUM_FIT',
+  HIGH_FIT: 'HIGH_FIT',
+};
+
+export type ActivityLevel = (typeof ActivityLevel)[keyof typeof ActivityLevel];
+
+const Sports: { [k: string]: 'CLIMBING' | 'JUMPING' } = {
+  CLIMBING: 'CLIMBING',
+  JUMPING: 'JUMPING',
+};
+
+export type Sports = (typeof Sports)[keyof typeof Sports];

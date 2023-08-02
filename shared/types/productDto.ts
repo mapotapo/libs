@@ -56,25 +56,8 @@ export type ProductWithCoversDto = ProductDto & {
   coversIncluded: ProductCovers[];
 };
 
-export type ProductListingDto = Omit<
-  ProductDto,
-  | 'productType'
-  | 'name'
-  | 'description'
-  | 'shortDescription'
-  | 'duration'
-  | 'experience'
-  | 'activityLevel'
-  | 'quantityRequired'
-  | 'quantityRequiredMin'
-  | 'quantityRequiredMax'
-  | 'priceOptions'
-  | 'itemsToBring'
-  | 'dateCreated'
-  | 'dateUpdated'
-  | 'location'
-  | 'medias'
-> & {
+// prettier-ignore print-width
+export type ProductListingDto = Pick<ProductDto, 'id' | 'productCode' | 'category' | 'price' | 'currency'> & {
   location: Omit<Location, 'countryCode'>;
   medias: Omit<Media, 'src' | 'mediumSizeUrl' | 'largeSizeUrl'>[];
 };
