@@ -64,7 +64,7 @@ export type ProductWithCoversDto = ProductDto & {
 };
 
 // prettier-ignore print-width
-export type ProductListingDto = Pick<ProductDto, 'id' | 'productCode' | 'category' | 'price' | 'currency'> & {
+export type ProductListingDto = Pick<ProductDto, 'id' | 'name' | 'productCode' | 'category' | 'price' | 'currency'> & {
   location: Omit<Location, 'city'>;
   images: Pick<Image, 'mediumSizeUrl'>[];
 };
