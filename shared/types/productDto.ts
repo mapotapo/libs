@@ -1,4 +1,4 @@
-import { ActivityLevel, Currency, ExperienceLevel, MediaType, ProductType } from '../enums/productEnums';
+import { ActivityLevel, Currency, ExperienceLevel, ProductType } from '../enums/productEnums';
 
 export type ProductCovers = {
   label: string;
@@ -20,12 +20,18 @@ export type PriceOption = {
   productCode: string;
 };
 
-export type Media = {
-  mediaType: MediaType;
-  src: string;
+export type Image = {
+  redzyId: number;
+  itemUrl: string;
   thumbnailUrl?: string | null;
   mediumSizeUrl?: string | null;
   largeSizeUrl?: string | null;
+};
+
+export type Video = {
+  redzyId: number;
+  platform?: string | null;
+  url: string;
 };
 
 export type ProductDto = {
@@ -46,7 +52,8 @@ export type ProductDto = {
   price: number;
   priceOptions: PriceOption[];
   currency: Currency;
-  medias: Media[];
+  images: Image[];
+  videos: Video[];
   itemsToBring: string[];
   dateCreated: Date;
   dateUpdated: Date;
@@ -59,5 +66,5 @@ export type ProductWithCoversDto = ProductDto & {
 // prettier-ignore print-width
 export type ProductListingDto = Pick<ProductDto, 'id' | 'productCode' | 'category' | 'price' | 'currency'> & {
   location: Omit<Location, 'countryCode'>;
-  medias: Omit<Media, 'src' | 'mediumSizeUrl' | 'largeSizeUrl'>[];
+  images: Pick<Image, 'thumbnailUrl'>[];
 };
