@@ -34,6 +34,12 @@ export type Video = {
   url: string;
 };
 
+export type Category = {
+  id: string;
+  name: string;
+  description?: string | null;
+};
+
 export type ProductDto = {
   id: string;
   productCode: string;
@@ -41,7 +47,7 @@ export type ProductDto = {
   name: string;
   shortDescription: string;
   description: string;
-  category: string;
+  Category?: Category | null;
   duration: number;
   experience: ExperienceLevel;
   activityLevel: ActivityLevel;
@@ -64,7 +70,8 @@ export type ProductWithCoversDto = ProductDto & {
 };
 
 // prettier-ignore print-width
-export type ProductListingDto = Pick<ProductDto, 'id' | 'name' | 'productCode' | 'category' | 'price' | 'currency'> & {
+export type ProductListingDto = Pick<ProductDto, 'id' | 'name' | 'productCode' | 'price' | 'currency'> & {
+  Category?: Pick<Category, 'name'> | null;
   location: Omit<Location, 'city'>;
   images: Pick<Image, 'mediumSizeUrl'>[];
 };
