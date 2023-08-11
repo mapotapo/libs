@@ -1,5 +1,4 @@
 import { ActivityLevel, Currency, ExperienceLevel, ProductType } from '../enums/productEnums';
-import { CategoryDto } from './category';
 
 export type ProductCovers = {
   label: string;
@@ -42,7 +41,7 @@ export type ProductDto = {
   name: string;
   shortDescription: string;
   description: string;
-  Category?: CategoryDto | null;
+  category: string;
   duration: number;
   experience: ExperienceLevel;
   activityLevel: ActivityLevel;
@@ -65,8 +64,13 @@ export type ProductWithCoversDto = ProductDto & {
 };
 
 // prettier-ignore print-width
-export type ProductListingDto = Pick<ProductDto, 'id' | 'name' | 'productCode' | 'price' | 'currency'> & {
-  Category?: Pick<CategoryDto, 'name' | 'icon'> | null;
+export type ProductListingDto = Pick<ProductDto, 'id' | 'name' | 'productCode' | 'category' | 'price' | 'currency'> & {
   location: Omit<Location, 'city'>;
   images: Pick<Image, 'mediumSizeUrl'>[];
 };
+
+export type SportCategory = {
+  title: string;
+  link: string;
+  icon: any;
+}
