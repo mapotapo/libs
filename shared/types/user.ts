@@ -6,7 +6,6 @@ export type User = {
   type: UserType,
   name: string,
   email: string,
-  username: string,
   password: string,
   recoverPasswordToken?: string | null,
   registrationDate: Date
