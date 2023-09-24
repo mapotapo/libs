@@ -2,7 +2,7 @@ import {UserType} from "../enums/userEnums";
 
 export type User = {
   id: string,
-  avatar: string,
+  avatar?: string,
   type: UserType,
   name: string,
   email: string,
