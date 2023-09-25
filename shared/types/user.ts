@@ -1,10 +1,12 @@
-import {UserType} from "../enums/userEnums";
+import {UserStatus, UserType} from "../enums/userEnums";
 
 export type User = {
   id: string,
-  avatar?: string,
+  avatar?: string | null,
   type: UserType,
-  name: string,
+  status: UserStatus,
+  firstName: string,
+  lastName: string,
   email: string,
   password: string,
   recoverPasswordToken?: string | null,
