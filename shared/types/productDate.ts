@@ -1,4 +1,4 @@
-import { ProductDto } from './product';
+import { ProductDto, ProductAggregateDetails } from './product';
 
 export type PriceOptionProductDate = {
     price: number;
@@ -10,9 +10,9 @@ export type PriceOptionProductDate = {
 
 export type ProductDateDto = {
     id: string;
-    rezdyId: string;
+    rezdyId: number;
     productId: string;
-    product: ProductDto;
+    product: ProductDto | ProductAggregateDetails;
     startTime: Date;
     endTime: Date;
     allDay: boolean;
