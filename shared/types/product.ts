@@ -1,5 +1,6 @@
 import { ActivityLevel, Currency, ExperienceLevel, ProductType } from '../enums/productEnums';
 import { CategoryDto } from './category';
+import { ProductDateDto } from './productDate';
 
 export type ProductCovers = {
   label: string;
@@ -58,6 +59,7 @@ export type ProductDto = {
   itemsToBring: string[];
   dateCreated: Date;
   dateUpdated: Date;
+  productDates?: ProductDateDto[];
 };
 
 export type ProductWithCoversDto = ProductDto & {
@@ -70,3 +72,15 @@ export type ProductListingDto = Pick<ProductDto, 'id' | 'name' | 'productCode' |
   location: Omit<Location, 'city'>;
   images: Pick<Image, 'mediumSizeUrl'>[];
 };
+
+export type ProductAggregateDetails = {
+  id: string;
+  name: string;
+  productCode: string;
+  productType: ProductType;
+  experience: ExperienceLevel;
+  duration: number;
+  activityLevel: ActivityLevel;
+  location: Location;
+  price: number;
+  };
