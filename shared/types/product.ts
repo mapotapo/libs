@@ -59,7 +59,7 @@ export type ProductDto = {
   itemsToBring: string[];
   dateCreated: Date;
   dateUpdated: Date;
-  productDates?: ProductDateDto[];
+  productDates?: ProductDateDto[] | null;
 };
 
 export type ProductWithCoversDto = ProductDto & {
@@ -72,15 +72,3 @@ export type ProductListingDto = Pick<ProductDto, 'id' | 'name' | 'productCode' |
   location: Location;
   images: Pick<Image, 'mediumSizeUrl'>[];
 };
-
-export type ProductAggregateDetails = {
-  id: string;
-  name: string;
-  productCode: string;
-  productType: ProductType;
-  experience: ExperienceLevel;
-  duration: number;
-  activityLevel: ActivityLevel;
-  location: Location;
-  price: number;
-  };
