@@ -60,6 +60,7 @@ export type ProductDto = {
   dateCreated: Date;
   dateUpdated: Date;
   productDates?: ProductDateDto[] | null;
+  confirmModeMinParticipants?: number | null;
 };
 
 export type ProductWithCoversDto = ProductDto & {
