@@ -7,6 +7,7 @@ export type CategoryDto = {
   description?: string | null;
   active: boolean;
   order: number;
+  slug: string;
 };
 
 export type CategoryNoIdDto = Omit<CategoryDto, 'id'>;
