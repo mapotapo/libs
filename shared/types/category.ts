@@ -1,16 +1,12 @@
 import { ProductDto } from './product';
 
-export type Icon = {
-  default: string;
-  hover?: string | null;
-  selected?: string | null;
-};
-
 export type CategoryDto = {
   id: string;
   name: string;
-  icon: Icon;
+  icon: String;
   description?: string | null;
+  active: boolean;
+  order: number;
 };
 
 export type CategoryNoIdDto = Omit<CategoryDto, 'id'>;
