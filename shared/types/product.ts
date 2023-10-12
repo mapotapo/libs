@@ -7,10 +7,10 @@ export type ProductCovers = {
 };
 
 export type Location = {
-  city: string;
-  countryCode: string;
-  latitude: number;
-  longitude: number;
+  city: string | null;
+  countryCode: string | null;
+  latitude: number | null;
+  longitude: number | null;
   description?: string | null;
 };
 
