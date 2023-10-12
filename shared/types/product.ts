@@ -41,12 +41,14 @@ export type ProductDto = {
   productCode: string;
   productType: ProductType;
   name: string;
-  shortDescription: string;
+  shortDescription?: string;
   description: string;
   Category?: CategoryDto | null;
   duration: number;
   experience: ExperienceLevel;
   activityLevel: ActivityLevel;
+  whatsIncluded?: string[];
+  whatsNotIncluded?: string[];
   quantityRequired: boolean;
   quantityRequiredMin: number;
   quantityRequiredMax: number;
@@ -68,7 +70,7 @@ export type ProductWithCoversDto = ProductDto & {
 };
 
 // prettier-ignore print-width
-export type ProductListingDto = Pick<ProductDto, 'id' | 'name' | 'productCode' | 'price' | 'currency'> & {
+export type ProductListingDto = Pick<ProductDto, 'id' | 'name' | 'productCode' | 'price' | 'currency' | 'productType'> & {
   Category?: Pick<CategoryDto, 'name' | 'icon'> | null;
   location: Location;
   images: Pick<Image, 'mediumSizeUrl'>[];
