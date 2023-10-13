@@ -1,14 +1,14 @@
 export type BlogPost = {
     id: string;
     title: string;
-    description?: string;
     slug: string;
-    content?: string;
-    coverImage?: string;
-    tags: string[];
-    metaTitle?: string;
-    metaDescription?: string;
-    metaKeywords?: string;
+    description?: string | null;
+    content?: string | null;
+    coverImage?: string | null;
+    tags: string[] | null;
+    metaTitle?: string | null;
+    metaDescription?: string | null;
+    metaKeywords?: string | null;
     dateCreated: Date;
     dateUpdated: Date;
 };
