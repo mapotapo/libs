@@ -63,6 +63,8 @@ export type ProductDto = {
   dateUpdated: Date;
   productDates?: ProductDateDto[] | null;
   confirmModeMinParticipants?: number | null;
+  itinerary?: string[];
+  slug: string;
 };
 
 export type ProductWithCoversDto = ProductDto & {
