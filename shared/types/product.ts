@@ -36,6 +36,8 @@ export type Video = {
   url: string;
 };
 
+export type ProductStatus = 'DRAFT' | 'PUBLISHED' | 'DELETED' | 'UNPUBLISHED' | 'PRIVATE';
+
 export type ProductDto = {
   id: string;
   productCode: string;
@@ -64,6 +66,7 @@ export type ProductDto = {
   productDates?: ProductDateDto[] | null;
   confirmModeMinParticipants?: number | null;
   itinerary?: string[];
+  status : ProductStatus;
   slug: string;
 };
 
