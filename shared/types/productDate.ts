@@ -1,3 +1,5 @@
+export type ProductDateStatus = 'PLANNED' | 'CONFIRMED' | 'SOLD_OUT' | 'ALMOST_CONFIRMED' | 'CANCELLED' | 'ALMOST_SOLD_OUT';
+
 export type PriceOptionProductDate = {
     price: number;
     label: string;
@@ -13,4 +15,5 @@ export type ProductDateDto = {
     seats: number;
     seatsAvailable: number;
     priceOptions: PriceOptionProductDate[];
+    status: ProductDateStatus;
     };
