@@ -1,4 +1,4 @@
-export type ProductDateStatus = 'PLANNED' | 'CONFIRMED' | 'SOLD_OUT' | 'ALMOST_CONFIRMED' | 'CANCELLED' | 'ALMOST_SOLD_OUT';
+import { ProductDateStatus } from "../enums/productDatesEnums"
 
 export type PriceOptionProductDate = {
     price: number;
