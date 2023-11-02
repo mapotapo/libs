@@ -3,7 +3,7 @@ export type BookingCustomer = {
     firstName: string;
     lastName: string;
     name: string;
-    email?: string | null;
+    email: string;
     phone?: string | null;
     };
 
