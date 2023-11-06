@@ -56,6 +56,7 @@ export type ProductDto = {
   shortDescription?: string;
   description: string;
   Category?: CategoryDto | null;
+  categoryId: string | null;
   duration: number;
   experience: ExperienceLevel;
   activityLevel: ActivityLevel;
