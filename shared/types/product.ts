@@ -38,6 +38,16 @@ export type Video = {
 
 export type ProductStatus = 'DRAFT' | 'PUBLISHED' | 'DELETED' | 'UNPUBLISHED' | 'PRIVATE';
 
+export type ProductBookingFieldCheckIn = {
+  label: string;
+  // requiredPerParticipant: boolean,
+  // requiredPerBooking: boolean,
+  // visiblePerParticipant: boolean,
+  // visiblePerBooking: boolean,
+  listOptions: string | null,
+  fieldType: string
+}
+
 export type ProductDto = {
   id: string;
   productCode: string;
@@ -68,6 +78,8 @@ export type ProductDto = {
   itinerary?: string[];
   status : ProductStatus;
   slug: string;
+  //bookingFields: ProductBookingField[];
+  checkInFields: ProductBookingFieldCheckIn[];
 };
 
 export type ProductWithCoversDto = ProductDto & {
