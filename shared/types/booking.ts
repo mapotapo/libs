@@ -5,6 +5,11 @@ export type BookingCustomer = {
     name: string;
     email: string;
     phone?: string | null;
+    addressLine?: string | null;
+    city?: string | null;
+    state?: string | null;
+    companyName?: string | null;
+    postCode?: string | null;
     };
 
 export type BookingItemQuantity = {
