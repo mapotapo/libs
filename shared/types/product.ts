@@ -48,6 +48,22 @@ export type ProductBookingFieldCheckIn = {
   fieldType: string
 }
 
+type ProductFaq = {
+  question: string;
+  answer: string;
+};
+
+type ProductAccomodation = {
+  name: string;
+  image: string;
+  description: string;
+};
+
+type ProductHost = {
+  name: string;
+  description: string;
+};
+
 export type ProductDto = {
   id: string;
   productCode: string;
@@ -77,10 +93,13 @@ export type ProductDto = {
   productDates?: ProductDateDto[] | null;
   confirmModeMinParticipants?: number | null;
   itinerary?: string[];
-  status : ProductStatus;
+  status: ProductStatus;
   slug: string;
-  //bookingFields: ProductBookingField[];
   checkInFields: ProductBookingFieldCheckIn[];
+  galleryImages: string[] | null;
+  faqs: ProductFaq[] | null;
+  accomodations: ProductAccomodation[] | null;
+  hosts: ProductHost[] | null;
 };
 
 export type ProductWithCoversDto = ProductDto & {

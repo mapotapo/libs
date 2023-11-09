@@ -69,4 +69,5 @@ export type Booking = {
     dateConfirmed?: Date | null;
     datePaid?: Date | null;
     payments: BookingPayment[];
+    checkin?: boolean | null;
     };
