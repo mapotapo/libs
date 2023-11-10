@@ -48,18 +48,18 @@ export type ProductBookingFieldCheckIn = {
   fieldType: string
 }
 
-type ProductFaq = {
+export type ProductFaq = {
   question: string;
   answer: string;
 };
 
-type ProductAccomodation = {
+export type ProductAccomodation = {
   name: string;
   image: string;
   description: string;
 };
 
-type ProductHost = {
+export type ProductHost = {
   name: string;
   description: string;
 };
