@@ -1,3 +1,5 @@
+import { ProductDto } from './product';
+
 export type BookingCustomer = {
     rezdyId: number;
     firstName: string;
@@ -10,27 +12,27 @@ export type BookingCustomer = {
     state?: string | null;
     companyName?: string | null;
     postCode?: string | null;
-    };
+};
 
 export type BookingItemQuantity = {
     optionLabel: string;
     optionPrice: number;
     value: number;
-    };
+};
 
 export type BookingPartecipantValue = {
     label: string;
     value?: string | null;
-    };
+};
 
 export type BookingPartecipant = {
     fields: BookingPartecipantValue[];
-    };
+};
 
 export type BookingPickupLocation = {
     locationName?: string | null;
     pickupInstructions?: string | null;
-    };
+};
 
 
 export type BookingPayment = {
@@ -40,7 +42,7 @@ export type BookingPayment = {
     date: Date;
     label: string;
     recipient?: string | null;
-    };
+};
 
 export type BookingItem = {
     productName: string;
@@ -54,7 +56,7 @@ export type BookingItem = {
     participants: BookingPartecipant[];
     subtotal: number;
     pickupLocation?: BookingPickupLocation | null;
-    };
+};
 
 export type Booking = {
     id: string | null; // so we can migrate from rezdy
@@ -70,4 +72,6 @@ export type Booking = {
     datePaid?: Date | null;
     payments: BookingPayment[];
     checkin?: boolean | null;
-    };
+    productId?: string | null | undefined;
+    Product?: ProductDto | any; // last type is for cretion queries
+};
