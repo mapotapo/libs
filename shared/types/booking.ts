@@ -77,5 +77,5 @@ export type Booking = {
 };
 
 export type BookingListingItem = Pick<Booking, 'id' | 'orderNumber' | 'customer' | 'items' | 'totalAmount' | 'totalCurrency' | 'totalPaid' | 'totalDue' | 'dateCreated' | 'dateConfirmed' | 'datePaid' | 'checkin' | 'productId' | 'Product'> & {
-    Product: Pick<ProductDto, 'name' | 'slug' | 'images' | 'location'>
+    Product: Pick<ProductDto, 'name' | 'slug' | 'images' | 'location'> | null;
 };
