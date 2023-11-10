@@ -73,5 +73,9 @@ export type Booking = {
     payments: BookingPayment[];
     checkin?: boolean | null;
     productId?: string | null | undefined;
-    Product?: ProductDto | any; // last type is for cretion queries
+    Product?: ProductDto | any; // any because of connect
+};
+
+export type BookingListingItem = Pick<Booking, 'id' | 'orderNumber' | 'customer' | 'items' | 'totalAmount' | 'totalCurrency' | 'totalPaid' | 'totalDue' | 'dateCreated' | 'dateConfirmed' | 'datePaid' | 'checkin' | 'productId' | 'Product'> & {
+    Product: Pick<ProductDto, 'name' | 'slug' | 'images' | 'location'>
 };
