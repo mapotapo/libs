@@ -19,7 +19,7 @@ export type PriceOption = {
   label: string;
   redzyId: number;
   seatsUsed: number;
-  productCode: string;
+  productCode?: string | null;
 };
 
 export type Image = {
