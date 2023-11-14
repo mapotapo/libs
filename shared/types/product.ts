@@ -68,6 +68,7 @@ export type ProductDto = {
   id: string;
   productCode: string;
   productType: ProductType;
+  internalCode?: string | null;
   name: string;
   shortDescription?: string;
   description: string;
