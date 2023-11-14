@@ -101,6 +101,10 @@ export type ProductDto = {
   faqs: ProductFaq[] | null;
   accomodations: ProductAccomodation[] | null;
   hosts: ProductHost[] | null;
+  metaTitle?: string | null;
+  metaDescription?: string | null;
+  metaKeywords?: string | null;
+  metaImage?: string | null;
 };
 
 export type ProductWithCoversDto = ProductDto & {
