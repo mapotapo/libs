@@ -15,7 +15,7 @@ export type ActivityLevelDescription = {
 export type CategoryDto = {
   id: string;
   name: string;
-  icon: String;
+  icon: string;
   description?: string | null;
   active: boolean;
   order: number;
