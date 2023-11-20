@@ -9,8 +9,6 @@ export type BlogPost = {
     metaTitle?: string | null;
     metaDescription?: string | null;
     metaKeywords?: string | null;
-    dateCreated: Date;
-    dateUpdated: Date;
 };
 
-export type BlogPostListing = Pick<BlogPost, 'id' | 'title' | 'description' | 'content' | 'slug' | 'coverImage' | 'tags' | 'dateCreated' | 'dateUpdated'>;
+export type BlogPostListing = Pick<BlogPost, 'id' | 'title' | 'description' | 'content' | 'slug' | 'coverImage' | 'tags'>;
