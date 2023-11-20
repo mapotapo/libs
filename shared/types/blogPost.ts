@@ -5,7 +5,7 @@ export type BlogPost = {
     description?: string | null;
     content?: string | null;
     coverImage?: string | null;
-    tags: string[] | null;
+    tags?: string[] | null;
     metaTitle?: string | null;
     metaDescription?: string | null;
     metaKeywords?: string | null;
