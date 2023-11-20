@@ -13,4 +13,4 @@ export type BlogPost = {
     dateUpdated?: Date | null;
 };
 
-export type BlogPostListing = Pick<BlogPost, 'id' | 'title' | 'description' | 'content' | 'slug' | 'coverImage' | 'tags'>;
+export type BlogPostListing = Pick<BlogPost, 'id' | 'title' | 'description' | 'content' | 'slug' | 'coverImage' | 'tags' | 'dateCreated'>;
