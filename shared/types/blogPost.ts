@@ -5,12 +5,12 @@ export type BlogPost = {
     description?: string | null;
     content?: string | null;
     coverImage?: string | null;
-    tags: string[] | null;
+    tags?: string[] | null;
     metaTitle?: string | null;
     metaDescription?: string | null;
     metaKeywords?: string | null;
-    dateCreated: Date;
-    dateUpdated: Date;
+    dateCreated?: Date | null;
+    dateUpdated?: Date | null;
 };
 
-export type BlogPostListing = Pick<BlogPost, 'id' | 'title' | 'description' | 'slug' | 'coverImage' | 'tags' | 'dateCreated'>;
+export type BlogPostListing = Pick<BlogPost, 'id' | 'title' | 'description' | 'content' | 'slug' | 'coverImage' | 'tags' | 'dateCreated'>;

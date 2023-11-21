@@ -8,22 +8,25 @@ export type ProductCovers = {
 
 export type Location = {
   city: string | null;
-  countryCode: string | null;
+  countryCode?: string | null;
   latitude: number | null;
   longitude: number | null;
   description?: string | null;
+  address?: string | null;
+  postCode?:    string | null;
+  state?:       string | null;
 };
 
 export type PriceOption = {
   price: number;
   label: string;
-  redzyId: number;
-  seatsUsed: number;
+  redzyId?: number | null;
+  seatsUsed?: number | null;
   productCode?: string | null;
 };
 
 export type Image = {
-  redzyId: number;
+  redzyId?: number | null;
   itemUrl: string;
   thumbnailUrl?: string | null;
   mediumSizeUrl?: string | null;
