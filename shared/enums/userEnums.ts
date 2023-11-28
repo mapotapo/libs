@@ -12,10 +12,12 @@ export type UserType = (typeof UserType)[keyof typeof UserType];
 export const UserStatus: {
   [k: string]:
       | 'ACTIVE'
-      | 'INACTIVE';
+      | 'INACTIVE'
+      | 'DELETED';
 } = {
   ACTIVE: 'ACTIVE',
   INACTIVE: 'INACTIVE',
+  DELETED: 'DELETED'
 };
 
 export type UserStatus = (typeof UserStatus)[keyof typeof UserStatus];
