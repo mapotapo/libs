@@ -58,7 +58,7 @@ export type ProductFaq = {
 
 export type ProductAccomodation = {
   name: string;
-  image: string;
+  image?: string | null;
   description: string;
 };
 
