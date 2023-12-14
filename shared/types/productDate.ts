@@ -10,6 +10,7 @@ export type PriceOptionProductDate = {
 export type ProductDateDto = {
     rezdyId: number;
     startTime: Date;
+    rezdyStartTimeLocal?: string | null;
     endTime: Date;
     allDay: boolean;
     seats: number;
