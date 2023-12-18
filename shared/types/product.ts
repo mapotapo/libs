@@ -110,6 +110,7 @@ export type ProductDto = {
   metaImage?: string | null;
   rezdyDateUpdated?: Date | null;
   tags?: string[] | null;
+  sortOrder?: number | null;
 };
 
 export type ProductWithCoversDto = ProductDto & {
