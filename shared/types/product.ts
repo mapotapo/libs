@@ -111,6 +111,7 @@ export type ProductDto = {
   rezdyDateUpdated?: Date | null;
   tags?: string[] | null;
   sortOrder?: number | null;
+  guideId?: string | null;
 };
 
 export type ProductWithCoversDto = ProductDto & {

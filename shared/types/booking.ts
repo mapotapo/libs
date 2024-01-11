@@ -48,6 +48,7 @@ export type BookingItem = {
     productName: string;
     productCode: string;
     startTime: Date;
+    rezdyStartTimeLocal?: string | null;
     endTime: Date;
     quantities: BookingItemQuantity[];
     totalQuantity: number;
