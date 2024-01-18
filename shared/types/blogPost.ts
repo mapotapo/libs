@@ -1,3 +1,5 @@
+export type BlogPostStatus = 'DRAFT' | 'PUBLISHED' | 'DELETED';
+
 export type BlogPost = {
     id: string;
     title: string;
@@ -11,6 +13,7 @@ export type BlogPost = {
     metaKeywords?: string | null;
     dateCreated?: Date | null;
     dateUpdated?: Date | null;
+    status?: BlogPostStatus | null;
 };
 
 export type BlogPostListing = Pick<BlogPost, 'id' | 'title' | 'description' | 'content' | 'slug' | 'coverImage' | 'tags' | 'dateCreated'>;
