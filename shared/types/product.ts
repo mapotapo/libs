@@ -2,10 +2,6 @@ import { ActivityLevel, Currency, ExperienceLevel, ProductType } from '../enums/
 import { CategoryDto } from './category';
 import { ProductDateDto } from './productDate';
 
-export type ProductCovers = {
-  label: string;
-};
-
 export type Location = {
   city: string | null;
   countryCode?: string | null;
@@ -31,6 +27,7 @@ export type Image = {
   thumbnailUrl?: string | null;
   mediumSizeUrl?: string | null;
   largeSizeUrl?: string | null;
+  tag?: string | null;
 };
 
 export type Video = {
@@ -67,6 +64,11 @@ export type ProductHost = {
   description: string;
 };
 
+export type ItineraryItem = {
+  title: string | null;
+  description: string | null;
+};
+
 export type ProductDto = {
   id: string;
   productCode: string;
@@ -96,7 +98,8 @@ export type ProductDto = {
   dateUpdated: Date;
   productDates?: ProductDateDto[] | null;
   confirmModeMinParticipants?: number | null;
-  itinerary?: string[];
+  itinerary?: string[]; // TODO - to be removed
+  itineraryItems?: ItineraryItem[] | null;
   status: ProductStatus;
   slug: string;
   checkInFields: ProductBookingFieldCheckIn[];
@@ -112,10 +115,6 @@ export type ProductDto = {
   tags?: string[] | null;
   sortOrder?: number | null;
   guideId?: string | null;
-};
-
-export type ProductWithCoversDto = ProductDto & {
-  coversIncluded: ProductCovers[];
 };
 
 // prettier-ignore print-width
