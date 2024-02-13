@@ -77,7 +77,7 @@ export type ProductDto = {
   name: string;
   shortDescription?: string;
   description: string;
-  Category?: Partial<CategoryDto> | null;
+  Category?: CategoryDto | Partial<CategoryDto> | null;
   categoryId?: string | null;
   duration: number;
   experience: ExperienceLevel;
