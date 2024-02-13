@@ -77,7 +77,7 @@ export type ProductDto = {
   name: string;
   shortDescription?: string;
   description: string;
-  Category?: CategoryDto | Partial<CategoryDto> | null;
+  Category?: CategoryDto | null;
   categoryId?: string | null;
   duration: number;
   experience: ExperienceLevel;
@@ -117,8 +117,9 @@ export type ProductDto = {
   guideId?: string | null;
 };
 
-// ProductListingDto is a subset of ProductDto
-export type ProductListingDto = Pick<ProductDto, 'id' | 'name' | 'productCode' | 'price' | 'currency' | 'productType' | 'slug' | 'duration' | 'productDates' | 'quantityRequiredMax' | 'confirmModeMinParticipants' | 'tags' | 'location'> & {
-  Category?: Pick<CategoryDto, 'id' | 'name' | 'slug'>;
-  images: Partial<Image>[];
+type RecursivePartial<T> = {
+  [P in keyof T]?: T[P];
 };
+
+// ProductListingDto is a subset of ProductDto
+export type ProductListingDto = RecursivePartial<ProductDto>;
