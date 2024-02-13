@@ -9,8 +9,8 @@ export type Location = {
   longitude: number | null;
   description?: string | null;
   address?: string | null;
-  postCode?:    string | null;
-  state?:       string | null;
+  postCode?: string | null;
+  state?: string | null;
 };
 
 export type PriceOption = {
@@ -77,7 +77,7 @@ export type ProductDto = {
   name: string;
   shortDescription?: string;
   description: string;
-  Category?: CategoryDto | null;
+  Category?: Partial<CategoryDto> | null;
   categoryId?: string | null;
   duration: number;
   experience: ExperienceLevel;
@@ -117,9 +117,8 @@ export type ProductDto = {
   guideId?: string | null;
 };
 
-// prettier-ignore print-width
-export type ProductListingDto = Pick<ProductDto, 'id' | 'name' | 'productCode' | 'price' | 'currency' | 'productType' | 'slug'> & {
-  Category?: Pick<CategoryDto, 'name' | 'icon'> | null;
-  location: Location;
-  images: Pick<Image, 'mediumSizeUrl'>[];
+// ProductListingDto is a subset of ProductDto
+export type ProductListingDto = Pick<ProductDto, 'id' | 'name' | 'productCode' | 'price' | 'currency' | 'productType' | 'slug' | 'duration' | 'productDates' | 'quantityRequiredMax' | 'confirmModeMinParticipants' | 'tags' | 'location'> & {
+  Category?: Pick<CategoryDto, 'id' | 'name' | 'slug'>;
+  images: Partial<Image>[];
 };
