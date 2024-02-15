@@ -9,8 +9,8 @@ export type Location = {
   longitude: number | null;
   description?: string | null;
   address?: string | null;
-  postCode?:    string | null;
-  state?:       string | null;
+  postCode?: string | null;
+  state?: string | null;
 };
 
 export type PriceOption = {
@@ -117,9 +117,9 @@ export type ProductDto = {
   guideId?: string | null;
 };
 
-// prettier-ignore print-width
-export type ProductListingDto = Pick<ProductDto, 'id' | 'name' | 'productCode' | 'price' | 'currency' | 'productType' | 'slug'> & {
-  Category?: Pick<CategoryDto, 'name' | 'icon'> | null;
-  location: Location;
-  images: Pick<Image, 'mediumSizeUrl'>[];
+type RecursivePartial<T> = {
+  [P in keyof T]?: T[P];
 };
+
+// ProductListingDto is a subset of ProductDto
+export type ProductListingDto = RecursivePartial<ProductDto>;
